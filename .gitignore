@@ -1,3 +1,7 @@
+# misc
+.DS_store
+sephora_website_dataset.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
