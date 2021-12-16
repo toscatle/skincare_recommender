@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+      This is the title that appears in the browser tab.
+      Replace it with the title of your app
+    -->
+    <title>Skincare Recommender</title>
+    <link rel="stylesheet" media="screen" href="/static/bootstrap.min.css">
+    <!-- If you add custom CSS, put it after the above bootstrap link -->
+  </head>
+  <body>
+    <div class="container">
+      <!-- 
+        This top section has the gray background and large text containing the
+        name of the app
+      -->
+      <div class="jumbotron">
+        <!-- Replace with the name of your app-->
+        <h1 class="display-4">Skincare Recommender</h1>
+      </div>
+      <!-- This section contains a photo + the form for the user to enter data-->
+      <div class="container"> 
+        <div class="row">
+          <div class="col-md-4" style="text-align: center;">
+            <!--
+              Replace with a photo relevant to your project (and caption if
+              applicable). It will automatically fill the same width as the
+              template version due to CSS styling.
+            -->
+            <img src="/images/skincare_cover_photo.jpg" alt="skincare" style="width: 100%;">
+            <span style="font-size: small;">Photo from
+              <a href="https://unsplash.com/@bluespot?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                istockphoto.com
+              </a>
+            </span>
+          </div>
+          <div class="col-md-8">
+            <!--
+              Replace all labels and inputs with the relevant features for your
+              model
+              Attributes to note:
+              id: this is used on the front end to link the label to the input
+              name: this is used on the back end when you submit the form; it
+                becomes the key in the params dictionary
+              value: this is the default value of the input. not necessary but
+                helpful for speeding up demos
+              The <br>s between each label/input combo are a quick and easy way
+              to put each one on its own line. They aren't necessary for the
+              form to function but they help the flow without needing a lot of
+              nested <div>s to achieve the desired layout
+            -->
+            <form action="/make_prediction" method="post">
+              <label for="input-1">Number of Products</label>
+              <input type="text" id="input-1" name="num" value="3">
+              <br>
+              <label for="input-2">Product Category</label>
+              <select id="input-2" name="category">
+                <option value="1.0">Cleanser</option>
+                <option value="2.0">Moisturizer</option>
+                <option value="3.0">Face Mask</option>
+                <option value="4.0">Treatment</option>
+              </select>
+              <br>
+              <label for="input-3">Skin Type</label>
+              <!--
+                Note on "select" (drop-down): the value is what is sent as the
+                value in the params dictionary, the text between the tags is
+                what the user sees
+              -->
+              <select id="input-3" name="skin_type">
+                <option value="1.0">Combination</option>
+                <option value="2.0">Dry</option>
+                <option value="3.0">Normal</option>
+                <option value="4.0">Oily</option>
+                <option value="5.0">Sensitive</option>
+              </select>
+              <br>
+              <!-- You shouldn't need to change the submit button -->
+              <input type="submit" class="btn btn-primary btn-lg" value="Get Products!">
+            </form>
+          </div>
+        </div>  
+      </div>
+      <!-- hr is "horizontal rule". it makes a nice classy line -->
+      <hr>
+      <!-- This section contains paragraphs of text at the bottom -->
+      <div class="container">
+        <!--
+          Replace with your content. The <p> tags are how you create new
+          paragraphs. If you just hit enter, the text will "float" up to the
+          previous line
+        -->
+        <p>
+          This app recommends products based on customers' needs such as their skin type and the product category that they are searching for.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
