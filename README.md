@@ -10,7 +10,7 @@ This project explores a dataset of specific types of skincare products from Seph
 ***
 
 ## Business Problem
-As one of largest cosmetics retailer, Sephora is hoping to find new ways to attract and interact with customers who might find skincare and the number of products out there overwhelming. Building recommendations tailored to customers' preferences will help not only their shopping experiences, but hopefully improve the likelihood of finding beneficial products.
+As one of largest cosmetics retailer, Sephora is hoping to find new ways to attract and interact with customers who might find skincare and the number of products out there overwhelming. More specifically, help new customers filter and find products suited for their needs. Building recommendations tailored to customers' preferences will help not only their shopping experiences, but hopefully improve the likelihood of finding beneficial products.
 ***
 
 ## Data & EDA
@@ -21,15 +21,17 @@ Credits to Anastasia Gorina for the dataset and can be found [here](https://gith
 ***
 
 ## Methods
-Through the different approaches of collaborative filtering, iterations of memory-based and model-based techniques are examined through similarity metrics and RMSE. The dataset was split into training and test sets for model validation.
+Through the different approaches of collaborative filtering, iterations of memory-based and model-based techniques are examined through similarity metrics and RMSE. Algorithms explored include: KNN Basic, KNN with Means, KNN Baseline, SVD and ALS. The dataset was split into training and test sets for model validation.
 ***
 
 ## Results
-The KNNBaseline method with pearson correlation had the lowest RMSE (1.17) with a mean test RMSE of 1.19 after cross-validation. SVD had a very similar RMSE after performing a grid search to tune hyperparameters.
+The KNN Baseline method with pearson correlation as the similarity metric had the lowest RMSE (1.17) with a mean test RMSE of 1.19 after cross-validation. SVD had a very similar RMSE after performing a grid search to tune hyperparameters.
 ***
 
 ## Conclusions
-After determining the best model, reommendations were built out utilizing a function that takes in inputs, such as skin type, incorporates new customer ratings and then calculates similarities based on item-similarity to return the top N recommendations.
+After determining the best model, recommendations were built out utilizing a function that takes in inputs, such as skin type, incorporates new customer ratings and then calculates similarities based on item-similarity to return the top N recommendations. An example of the complete output can be seen below with more explanation in the Jupyter Notebook of this repo. 
+
+<img src ="images/recommender_func_example.png">
 ***
 
 ## Next Steps
